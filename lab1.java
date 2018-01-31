@@ -2,6 +2,14 @@ import java.util.Scanner;
 public class lab1 {
     public static void main( String[] args ) {
       // TODO code application logic here
+       Student arr[];
+       arr= new Studnet[2];
+       System.out.println ("feed me the first student");
+       arr[0] = new Student(0, input.)
+
+
+
+
       Scanner input = new Scanner(System.in);
       System.out.println("Welcome ");
       System.out.println("Homework 1: ");
