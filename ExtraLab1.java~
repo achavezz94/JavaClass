@@ -1,0 +1,21 @@
+public class ExtraLab1{
+
+  public static void main(String[] args) {
+
+    int numarray[] = new int[100];
+
+    for (int i=0; i <numarray.length; i++){
+        numarray[i]= (int)(Math.random()*10);
+        System.out.println(numarray[i]);
+    }
+
+    int randnum = (int) (Math.random()*10);
+
+    if (int i=0; randnum!=numarray[i];i++){
+      
+    }
+
+
+  }
+
+}
