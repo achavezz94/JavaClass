@@ -15,14 +15,20 @@ class ExtraLab1 {
 
     for (int i=0; i <numarray.length; i++){
       if (randnum == numarray[i]){
-        System.out.println("The number was found in the array in index: " + i);
+        boolean found = true;
         break;
       }
       else{
-        System.out.println("No");
-
+        boolean found = false;
       }
     }
+
+    if (found){
+      System.out.println("The number's index: " + i);
+    }
+    else
+      System.out.println("No");
+
 
       Arrays.sort(numarray);
 
@@ -30,15 +36,5 @@ class ExtraLab1 {
       System.out.println(numarray[i]);
     }
 
-
-
-    public class sortarray(x){
-      Arrays.sort(x);
-    }
-    public class printarray(y){
-      for (int i=0; i <numarray.length; i++){
-        System.out.println(y);
-      }
-    }
   }
 }
