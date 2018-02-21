@@ -5,7 +5,16 @@ public class Homework2B {
 
   public static void main(String[] args){
     TicTacToe game = new TicTacToe();
-    game.printBoard();
+    game.isBoardFull();
+    if (isBoardFull == false){
+      game.printBoard();
+      Scanner sc = new Scanner(System.in);
+      int row = sc.nextInt();
+      int col = sc.nextInt();
+      game.placeMark(row,col);
+      game.printBoard();
+    }
+
   }
 
 }
@@ -26,11 +35,10 @@ class TicTacToe {
         board[i][j] = '-';
       }
     }
-    System.out.println("hello");
   }
 
   public void printBoard(){
-    System.out.println("----------");
+    System.out.println("\n-------------");
 
     for (int i = 0; i < 3; i++){
       System.out.print("| ");
@@ -38,8 +46,45 @@ class TicTacToe {
         System.out.print(board[i][j] + " | ");
       }
       System.out.println();
-      System.out.println("-----------");
+      System.out.println("\n-------------");
     }
   }
+
+  public boolean isBoardFull(){
+    boolean isFull = true;
+
+    for (int i = 0; i < 3; i++){
+      for (int j = 0; j < 3 ;j++ ) {
+        if(board[i][j] == '-'){
+          isFull = false;
+        }
+      }
+    }
+    return isFull;
+}
+
+public void changePlayer() {
+     if (currentPlayerMark == 'x') {
+         currentPlayerMark = 'o';
+     }
+     else {
+         currentPlayerMark = 'x';
+     }
+ }
+
+ public boolean placeMark(int row, int col) {
+
+      // Make sure that row and column are in bounds of the board.
+      if ((row >= 0) && (row < 3)) {
+          if ((col >= 0) && (col < 3)) {
+              if (board[row][col] == '-') {
+                  board[row][col] = currentPlayerMark;
+                  return true;
+              }
+          }
+      }
+
+      return false;
+    }
 
 }
